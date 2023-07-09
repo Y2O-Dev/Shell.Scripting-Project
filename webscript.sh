@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Installing Dependencies
-echo "################################################"
+
 echo "Installing Packages"
 echo "################################################"
 sudo apt update && sudo apt install wget unzip apache2 -y > /dev/null
 echo 
 
 # Start & Enable Services
-echo "################################################"
+
 echo "Start & Enable Services"
 echo "################################################"
 
@@ -17,7 +17,7 @@ sudo systemctl enable apache2
 echo
 
 #Creating a Temp Directory
-echo "################################################"
+
 echo "Start Artifact Deployment"
 echo "################################################"
 
@@ -30,7 +30,7 @@ unzip 2098_health.zip
 sudo cp -r 2098_health/* /var/www/html/
 
 #Bounce Service
-echo "################################################"
+
 echo "Restarting apache2 Service"
 echo "################################################"
 
@@ -38,7 +38,7 @@ sudo systemctl restart apache2
 echo
 
 #Clean up
-echo "################################################"
+
 echo "Removing Temporary Files"
 echo "################################################"
 
